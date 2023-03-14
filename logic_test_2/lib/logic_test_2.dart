@@ -6,7 +6,7 @@ String jump(
 ) {
   bool result;
   int point = 0;
-  int limit = 10000;
+  int limit = 1000;
 
   if ((v1 > v2) && (x2 - x1) % (v1 - v2) == 0) {
     result = true;
