@@ -1,7 +1,7 @@
 name: flutter_test_1
 version: 1.0.0+1
 publish_to: none
-description: A new Flutter project.
+description: BRI Test Flutter project.
 environment:
   sdk: ">=2.19.2 <3.0.0"
 
@@ -12,6 +12,7 @@ dependencies:
     sdk: flutter
   equatable: ^2.0.5
   url_launcher: ^6.1.10
+  flutter_flavorizr: ^2.1.5
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -23,3 +24,61 @@ flutter:
 
 assets:
   - assets/models/
+
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "flavor-type"
+    ios:
+  ide: "vscode"
+
+  flavors:
+    devdebug:
+      app:
+        name: "Dev Debug Flavor"
+
+      android:
+        applicationId: "com.devdebug.test"
+
+      ios:
+        bundleId: "com.devdebug.test"
+        buildSettings:
+          # Development Team is visible in the apple developer portal
+          DEVELOPMENT_TEAM: AlfianPrab
+          PROVISIONING_PROFILE_SPECIFIER: "DevDebug-ProvisioningProfile"
+
+    devrelease:
+      app:
+        name: "Dev Release Flavor"
+
+      android:
+        applicationId: "com.devrelease.test"
+      ios:
+        bundleId: "com.devrelease.test"
+        buildSettings:
+          DEVELOPMENT_TEAM: AlfianPrab
+          PROVISIONING_PROFILE_SPECIFIER: "DevRelease-ProvisioningProfile"
+
+    proddebug:
+      app:
+        name: "Prod Debug App"
+
+      android:
+        applicationId: "com.proddebug.test"
+      ios:
+        bundleId: "com.proddebug.test"
+        buildSettings:
+          DEVELOPMENT_TEAM: AlfianPrab
+          PROVISIONING_PROFILE_SPECIFIER: "ProdDebug-ProvisioningProfile"
+
+    prodrelease:
+      app:
+        name: "Prod Release App"
+
+      android:
+        applicationId: "com.prodrelease.test"
+      ios:
+        bundleId: "com.prodrelease.test"
+        buildSettings:
+          DEVELOPMENT_TEAM: AlfianPrab
+          PROVISIONING_PROFILE_SPECIFIER: "ProdRelease-ProvisioningProfile"

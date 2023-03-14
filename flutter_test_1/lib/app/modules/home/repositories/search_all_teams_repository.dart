@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test_1/app/data/remote/search_all_teams_response.dart';
 import 'package:flutter_test_1/app/modules/home/providers/search_all_teams_provider.dart';
 import 'package:flutter_test_1/app/modules/home/repositories/search_all_teams_repository_impl.dart';

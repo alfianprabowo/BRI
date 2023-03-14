@@ -3,6 +3,7 @@ import 'package:flutter_test_1/app/data/remote/search_all_teams_response.dart';
 import 'package:flutter_test_1/app/modules/home/repositories/search_all_teams_repository.dart';
 import 'package:flutter_test_1/app/modules/team_detail/team_model.dart';
 import 'package:flutter_test_1/app/routes/app_pages.dart';
+import 'package:flutter_test_1/flavors.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
@@ -49,7 +50,7 @@ class HomeController extends GetxController {
         await searchAllTeamsRepository.getTeamList(
       query: <String, dynamic>{
         // ! CHANGE TO FLAVOR BASED LEAGUE
-        'l': 'Spanish La Liga',
+        'l': F.leagueUrl,
       },
     );
 
@@ -59,7 +60,7 @@ class HomeController extends GetxController {
       teamList.add(response.teams![i]);
       listLength.value++;
     }
-    leagueName.value = responseList[0].strLeague!;
+    leagueName.value = F.leagueUrl;
 
     isLoading(false);
     update();

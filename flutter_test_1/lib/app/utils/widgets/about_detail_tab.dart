@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test_1/app/utils/constants/layout_const.dart';
 import 'package:flutter_test_1/app/utils/constants/text_const.dart';
 
-import 'team_jersey.dart';
 import 'title_text.dart';
 
 class AboutDetailTab extends StatelessWidget {

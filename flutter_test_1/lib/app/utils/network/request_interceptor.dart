@@ -1,6 +1,7 @@
 class RequestInterceptor {
   static Map<String, String> get getHeaders {
     final Map<String, String> headers = <String, String>{
+      "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",
       "Accept-Type": "application/json",
     };

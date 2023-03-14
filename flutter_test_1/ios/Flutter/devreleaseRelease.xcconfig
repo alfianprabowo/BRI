@@ -1,0 +1,6 @@
+#include "Generated.xcconfig"
+
+FLUTTER_TARGET=lib/main_devrelease.dart
+ASSET_PREFIX=devrelease
+BUNDLE_NAME=Dev Release Flavor
+BUNDLE_DISPLAY_NAME=Dev Release Flavor

@@ -1,0 +1,6 @@
+#include "Generated.xcconfig"
+
+FLUTTER_TARGET=lib/main_prodrelease.dart
+ASSET_PREFIX=prodrelease
+BUNDLE_NAME=Prod Release App
+BUNDLE_DISPLAY_NAME=Prod Release App
