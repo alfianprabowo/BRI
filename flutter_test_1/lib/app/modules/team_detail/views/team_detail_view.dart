@@ -45,14 +45,32 @@ class TeamDetailView extends GetView<TeamDetailController> {
                         ),
                 ),
 
-                const SizedBox(height: LayoutConstant.spaceL),
+                const SizedBox(height: LayoutConstant.spaceM),
 
                 // Team Name
-                Text(
-                  '${controller.model.value.strTeam!} (${controller.model.value.strTeamShort})',
-                  style: const TextStyle(
-                    fontSize: 20,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '${controller.model.value.strTeam!} ',
+                      style: const TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                    controller.model.value.strTeamShort != null
+                        ? Text(
+                            '(${controller.model.value.strTeamShort})',
+                            style: const TextStyle(
+                              fontSize: 20,
+                            ),
+                          )
+                        : const Text(
+                            ' ',
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                  ],
                 ),
                 const SizedBox(height: LayoutConstant.spaceM),
                 Row(
@@ -76,12 +94,12 @@ class TeamDetailView extends GetView<TeamDetailController> {
                   ],
                 ),
 
-                const SizedBox(height: LayoutConstant.spaceL),
+                const SizedBox(height: LayoutConstant.spaceM),
 
                 Expanded(
                   child: Container(
                     margin: const EdgeInsets.all(LayoutConstant.spaceM),
-                    height: 50,
+                    // height: 60,
                     width: double.maxFinite,
                     child: Align(
                       alignment: Alignment.centerLeft,
@@ -92,6 +110,9 @@ class TeamDetailView extends GetView<TeamDetailController> {
                             labelColor: primaryColor,
                             indicatorColor: primaryColor,
                             unselectedLabelColor: Colors.grey,
+                            labelStyle: const TextStyle(
+                              fontSize: 16,
+                            ),
                             isScrollable: true,
                             tabs: const [
                               Text(TextConst.about),
@@ -107,13 +128,9 @@ class TeamDetailView extends GetView<TeamDetailController> {
                               controller: controller.tabController,
                               children: [
                                 AboutDetailTab(
-                                  colour1:
-                                      controller.model.value.strKitColour1!,
-                                  colour2:
-                                      controller.model.value.strKitColour2!,
                                   description:
-                                      controller.model.value.strDescriptionEN!,
-                                  keywords: controller.model.value.strKeywords!,
+                                      controller.model.value.strDescriptionEN,
+                                  keywords: controller.model.value.strKeywords,
                                 ),
                                 StadiumDetailTab(
                                   name: controller.model.value.strStadium,

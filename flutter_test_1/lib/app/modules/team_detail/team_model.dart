@@ -52,9 +52,9 @@ class Team extends Equatable {
   final String? strDescriptionNO;
   final dynamic strDescriptionIL;
   final dynamic strDescriptionPL;
-  final String? strKitColour1;
-  final String? strKitColour2;
-  final String? strKitColour3;
+  final dynamic strKitColour1;
+  final dynamic strKitColour2;
+  final dynamic strKitColour3;
   final String? strGender;
   final String? strCountry;
   final String? strTeamBadge;

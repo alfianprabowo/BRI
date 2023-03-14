@@ -10,6 +10,7 @@ void main() {
       title: "Flutter Test 1",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
+      debugShowCheckedModeBanner: false,
     ),
   );
 }
