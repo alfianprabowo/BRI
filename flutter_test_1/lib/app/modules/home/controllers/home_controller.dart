@@ -49,7 +49,6 @@ class HomeController extends GetxController {
     final SearchAllTeamsResponse response =
         await searchAllTeamsRepository.getTeamList(
       query: <String, dynamic>{
-        // ! CHANGE TO FLAVOR BASED LEAGUE
         'l': F.leagueUrl,
       },
     );
